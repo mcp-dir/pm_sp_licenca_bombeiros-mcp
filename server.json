@@ -1,0 +1,17 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.mcp-dir/pm_sp_licenca_bombeiros-mcp",
+  "title": "Polícia Militar SP: Licenças do Corpo de Bombeiros (CLCB, AVCB E TAACB)",
+  "description": "Polícia Militar SP: Licenças do Corpo de Bombeiros (CLCB, AVCB E TAACB), official-source lookup. Pla",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/mcp-dir/pm_sp_licenca_bombeiros-mcp",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://api.mcp.ai/p_pm_sp_licenca_bombeiros"
+    }
+  ]
+}

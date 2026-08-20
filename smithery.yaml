@@ -1,0 +1,33 @@
+# Smithery configuration for Polícia Militar SP: Licenças do Corpo de Bombeiros (CLCB, AVCB E TAACB)
+# Schema: https://smithery.ai/docs/build/project-config
+# Remote HTTP MCP — server hosted at https://api.mcp.ai/p_pm_sp_licenca_bombeiros
+
+name: pm_sp_licenca_bombeiros-mcp
+displayName: "Polícia Militar SP: Licenças do Corpo de Bombeiros (CLCB, AVCB E TAACB)"
+description: >
+  Polícia Militar SP: Licenças do Corpo de Bombeiros (CLCB, AVCB E TAACB), consulta em fonte oficial. Hospedado pela plataforma, sem credenciais da plataforma, pague por consulta com crédito pré-pago.
+
+version: 0.1.0
+license: MIT
+homepage: https://github.com/mcp-dir/pm_sp_licenca_bombeiros-mcp
+repository: https://github.com/mcp-dir/pm_sp_licenca_bombeiros-mcp
+
+tags:
+  - pm_sp_licenca_bombeiros
+  - brazil
+  - horizontal
+  - read-only
+
+# Remote HTTP MCP — sem startCommand local (servidor já hospedado)
+startCommand:
+  type: http
+  url: https://api.mcp.ai/p_pm_sp_licenca_bombeiros
+
+auth:
+  type: oauth2
+  resourceMetadataUrl: https://api.mcp.ai/p_pm_sp_licenca_bombeiros/.well-known/oauth-protected-resource
+  fallback:
+    type: agent-auth
+    description: >
+      Para clientes sem OAuth 2.1. O agente expõe uma tool authenticate(token).
+      Usuário gera o JWT em https://app.mcp.ai/agent-auth e cola no chat.
